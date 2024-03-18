@@ -1,4 +1,4 @@
-package com.manikanta.microservice.project.UserService;
+package com.manikanta.microservices.project.UserService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
