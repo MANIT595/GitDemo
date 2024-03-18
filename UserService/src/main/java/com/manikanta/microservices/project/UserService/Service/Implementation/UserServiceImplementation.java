@@ -52,13 +52,7 @@ public class UserServiceImplementation implements UserService {
     }
 
     private UserDTO mapToDTO(User user){
-        //convert Entity to DTO
         UserDTO userDTO =  modelMapper.map(user,UserDTO.class);
-//        postDto.setId(post.getId());
-//        postDto.setTitle(post.getTitle());
-//        postDto.setDescription(post.getDescription());
-//        postDto.setContent(post.getContent());
-
         return userDTO;
 
     }
