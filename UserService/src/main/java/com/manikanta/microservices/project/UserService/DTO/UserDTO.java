@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDTO {
-    private Long id;
+    private Long userId;
     private String firstName;
     private String lastName;
     @Column(nullable = false, unique = true)

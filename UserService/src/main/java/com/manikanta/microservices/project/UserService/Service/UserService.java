@@ -12,7 +12,7 @@ public interface UserService {
 
     List<UserDTO> getUsers();
 
-    UserDTO getUser(Long userId);
+    UserDTO getUser(Long userId) throws Exception;
 
     void deleteUser(Long userId);
 
