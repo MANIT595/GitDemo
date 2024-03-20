@@ -1,53 +1,925 @@
-2024-03-19T19:24:54.944-04:00  INFO 92067 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 92067 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
-2024-03-19T19:24:54.945-04:00  INFO 92067 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-03-19T19:24:55.173-04:00  INFO 92067 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-19T19:24:55.197-04:00  INFO 92067 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
-2024-03-19T19:24:55.357-04:00  INFO 92067 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-19T19:24:55.362-04:00  INFO 92067 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-19T19:24:55.362-04:00  INFO 92067 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-19T19:24:55.380-04:00  INFO 92067 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-19T19:24:55.380-04:00  INFO 92067 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 420 ms
-2024-03-19T19:24:55.435-04:00  INFO 92067 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-19T19:24:55.452-04:00  INFO 92067 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-19T19:24:55.463-04:00  INFO 92067 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-03-19T19:24:55.524-04:00  INFO 92067 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-19T19:24:55.531-04:00  INFO 92067 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-19T19:24:55.575-04:00  INFO 92067 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68bd8ca7
-2024-03-19T19:24:55.576-04:00  INFO 92067 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-19T19:24:55.589-04:00  WARN 92067 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-03-19T19:24:55.829-04:00  INFO 92067 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-19T19:24:55.862-04:00  INFO 92067 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-19T19:24:55.994-04:00  WARN 92067 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-19T19:24:56.124-04:00  INFO 92067 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-19T19:24:56.129-04:00  INFO 92067 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.33 seconds (process running for 1.595)
-2024-03-19T19:24:58.088-04:00  INFO 92067 --- [UserService] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-19T19:24:58.088-04:00  INFO 92067 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-19T19:24:58.089-04:00  INFO 92067 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-03-19T19:25:23.189-04:00  INFO 92067 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-03-19T19:25:23.191-04:00  INFO 92067 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-03-19T19:25:23.193-04:00  INFO 92067 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-03-19T19:25:25.096-04:00  INFO 92107 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 92107 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
-2024-03-19T19:25:25.097-04:00  INFO 92107 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-03-19T19:25:25.340-04:00  INFO 92107 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-19T19:25:25.364-04:00  INFO 92107 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
-2024-03-19T19:25:25.529-04:00  INFO 92107 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-03-19T19:25:25.534-04:00  INFO 92107 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-19T19:25:25.535-04:00  INFO 92107 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-19T19:25:25.555-04:00  INFO 92107 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-19T19:25:25.555-04:00  INFO 92107 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 441 ms
-2024-03-19T19:25:25.613-04:00  INFO 92107 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-19T19:25:25.632-04:00  INFO 92107 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-19T19:25:25.645-04:00  INFO 92107 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-03-19T19:25:25.715-04:00  INFO 92107 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-19T19:25:25.722-04:00  INFO 92107 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-19T19:25:25.774-04:00  INFO 92107 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@96abc76
-2024-03-19T19:25:25.775-04:00  INFO 92107 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-19T19:25:25.791-04:00  WARN 92107 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2024-03-19T19:25:26.039-04:00  INFO 92107 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-19T19:25:26.064-04:00  INFO 92107 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-19T19:25:26.204-04:00  WARN 92107 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-19T19:25:26.354-04:00  INFO 92107 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2024-03-19T19:25:26.359-04:00  INFO 92107 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.408 seconds (process running for 1.621)
-2024-03-19T19:25:34.908-04:00  INFO 92107 --- [UserService] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-19T19:25:34.908-04:00  INFO 92107 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-19T19:25:34.909-04:00  INFO 92107 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T00:16:40.157-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m24s562ms).
+2024-03-20T01:04:23.857-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47m43s699ms).
+2024-03-20T02:22:45.662-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m21s805ms).
+2024-03-20T03:55:38.735-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h32m53s74ms).
+2024-03-20T05:20:03.272-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h24m24s537ms).
+2024-03-20T06:16:16.442-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m13s169ms).
+2024-03-20T06:48:07.363-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m50s922ms).
+2024-03-20T07:38:20.154-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m12s791ms).
+2024-03-20T08:21:41.996-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=43m21s842ms).
+2024-03-20T08:37:11.933-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m29s937ms).
+2024-03-20T09:04:29.543-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m17s610ms).
+2024-03-20T09:29:31.220-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m1s676ms).
+2024-03-20T10:04:15.883-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m44s664ms).
+2024-03-20T10:20:34.872-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m18s989ms).
+2024-03-20T10:36:05.261-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s389ms).
+2024-03-20T11:01:59.409-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m54s148ms).
+2024-03-20T11:37:10.041-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m10s632ms).
+2024-03-20T11:50:32.166-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m22s124ms).
+2024-03-20T12:49:44.449-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m40s421ms).
+2024-03-20T12:56:06.874-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m22s426ms).
+2024-03-20T13:00:34.153-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m57s252ms).
+2024-03-20T13:03:12.658-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m8s490ms).
+2024-03-20T13:04:39.441-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s772ms).
+2024-03-20T13:20:09.482-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m30s41ms).
+2024-03-20T14:37:07.754-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m57s415ms).
+2024-03-20T14:38:13.159-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s405ms).
+2024-03-20T14:39:38.077-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s907ms).
+2024-03-20T14:51:32.788-04:00  WARN 92107 --- [UserService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m24s699ms).
+2024-03-20T15:00:02.641-04:00  INFO 92107 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:00:02.646-04:00  INFO 92107 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T15:00:02.649-04:00  INFO 92107 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T15:00:06.394-04:00  INFO 2581 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 2581 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:00:06.395-04:00  INFO 2581 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:00:06.540-04:00  WARN 2581 --- [UserService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2024-03-20T15:00:06.544-04:00  INFO 2581 --- [UserService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-20T15:00:06.552-04:00 ERROR 2581 --- [UserService] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.manikanta.microservices.project.UserService.UserServiceApplication.main(UserServiceApplication.java:9) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.4.jar:6.1.4]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:111) ~[spring-core-6.1.4.jar:6.1.4]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:165) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:64) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$ExposureFilter.<init>(OnAvailableEndpointCondition.java:180) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposureFilters(OnAvailableEndpointCondition.java:168) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:117) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:74) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	... 21 common frames omitted
+
+2024-03-20T15:00:54.494-04:00  INFO 2620 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 2620 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:00:54.495-04:00  INFO 2620 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:00:54.640-04:00  WARN 2620 --- [UserService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+2024-03-20T15:00:54.645-04:00  INFO 2620 --- [UserService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-20T15:00:54.653-04:00 ERROR 2620 --- [UserService] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.manikanta.microservices.project.UserService.UserServiceApplication.main(UserServiceApplication.java:9) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.4.jar:6.1.4]
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at org.springframework.util.Assert.isTrue(Assert.java:111) ~[spring-core-6.1.4.jar:6.1.4]
+	at org.springframework.boot.actuate.endpoint.EndpointId.<init>(EndpointId.java:58) ~[spring-boot-actuator-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.endpoint.EndpointId.fromPropertyValue(EndpointId.java:146) ~[spring-boot-actuator-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter$EndpointPatterns.<init>(IncludeExcludeEndpointFilter.java:165) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:89) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.<init>(IncludeExcludeEndpointFilter.java:64) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition$ExposureFilter.<init>(OnAvailableEndpointCondition.java:180) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getExposureFilters(OnAvailableEndpointCondition.java:168) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:117) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.actuate.autoconfigure.endpoint.condition.OnAvailableEndpointCondition.getMatchOutcome(OnAvailableEndpointCondition.java:74) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	... 21 common frames omitted
+
+2024-03-20T15:02:02.831-04:00  INFO 2695 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 2695 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:02:02.833-04:00  INFO 2695 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:02:03.040-04:00  WARN 2695 --- [UserService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+2024-03-20T15:02:03.045-04:00  INFO 2695 --- [UserService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-20T15:02:03.053-04:00 ERROR 2695 --- [UserService] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.manikanta.microservices.project.UserService.UserServiceApplication.main(UserServiceApplication.java:9) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.4.jar:6.1.4]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/logging/log4j/core/config/arbiters/Arbiter
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013) ~[na:na]
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.decodeCacheFiles(PluginRegistry.java:181) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.loadFromMainClassLoader(PluginRegistry.java:119) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginManager.collectPlugins(PluginManager.java:132) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:131) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:112) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createPatternParser(PatternLayout.java:209) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createSerializer(PatternLayout.java:123) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:111) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:58) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout$Builder.build(PatternLayout.java:494) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.setToDefault(AbstractConfiguration.java:567) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.DefaultConfiguration.<init>(DefaultConfiguration.java:47) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.LoggerContext.<init>(LoggerContext.java:81) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:171) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:145) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:74) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:227) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:174) ~[log4j-api-2.7.jar:2.7]
+	at org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration$Log4JCoreLoggerContextCondition.getMatchOutcome(Log4J2MetricsAutoConfiguration.java:59) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.core.config.arbiters.Arbiter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 51 common frames omitted
+
+2024-03-20T15:02:16.626-04:00  INFO 2713 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 2713 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:02:16.627-04:00  INFO 2713 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:02:16.844-04:00  WARN 2713 --- [UserService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+2024-03-20T15:02:16.849-04:00  INFO 2713 --- [UserService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-20T15:02:16.858-04:00 ERROR 2713 --- [UserService] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.manikanta.microservices.project.UserService.UserServiceApplication.main(UserServiceApplication.java:9) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.4.jar:6.1.4]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/logging/log4j/core/config/arbiters/Arbiter
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013) ~[na:na]
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.decodeCacheFiles(PluginRegistry.java:181) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.loadFromMainClassLoader(PluginRegistry.java:119) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginManager.collectPlugins(PluginManager.java:132) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:131) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:112) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createPatternParser(PatternLayout.java:209) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createSerializer(PatternLayout.java:123) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:111) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:58) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout$Builder.build(PatternLayout.java:494) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.setToDefault(AbstractConfiguration.java:567) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.DefaultConfiguration.<init>(DefaultConfiguration.java:47) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.LoggerContext.<init>(LoggerContext.java:81) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:171) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:145) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:74) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:227) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:174) ~[log4j-api-2.7.jar:2.7]
+	at org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration$Log4JCoreLoggerContextCondition.getMatchOutcome(Log4J2MetricsAutoConfiguration.java:59) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.core.config.arbiters.Arbiter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 51 common frames omitted
+
+2024-03-20T15:02:25.930-04:00  INFO 2740 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 2740 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:02:25.931-04:00  INFO 2740 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:02:26.241-04:00  INFO 2740 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T15:02:26.269-04:00  INFO 2740 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
+2024-03-20T15:02:26.466-04:00  INFO 2740 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T15:02:26.471-04:00  INFO 2740 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T15:02:26.471-04:00  INFO 2740 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T15:02:26.492-04:00  INFO 2740 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T15:02:26.493-04:00  INFO 2740 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 540 ms
+2024-03-20T15:02:26.549-04:00  INFO 2740 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T15:02:26.574-04:00  INFO 2740 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T15:02:26.594-04:00  INFO 2740 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T15:02:26.665-04:00  INFO 2740 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T15:02:26.673-04:00  INFO 2740 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T15:02:26.726-04:00  INFO 2740 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4cc8d70d
+2024-03-20T15:02:26.727-04:00  INFO 2740 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T15:02:26.743-04:00  WARN 2740 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T15:02:26.982-04:00  INFO 2740 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T15:02:27.009-04:00  INFO 2740 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:02:27.135-04:00  WARN 2740 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T15:02:27.273-04:00  INFO 2740 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T15:02:27.278-04:00  INFO 2740 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.523 seconds (process running for 1.745)
+2024-03-20T15:04:26.318-04:00  INFO 2740 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:04:26.326-04:00  INFO 2740 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T15:04:26.334-04:00  INFO 2740 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T15:04:29.256-04:00  INFO 2878 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 2878 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:04:29.258-04:00  INFO 2878 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:04:29.499-04:00  WARN 2878 --- [UserService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+2024-03-20T15:04:29.504-04:00  INFO 2878 --- [UserService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-20T15:04:29.515-04:00 ERROR 2878 --- [UserService] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.manikanta.microservices.project.UserService.UserServiceApplication.main(UserServiceApplication.java:9) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.4.jar:6.1.4]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/logging/log4j/core/config/arbiters/Arbiter
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013) ~[na:na]
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.decodeCacheFiles(PluginRegistry.java:181) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.loadFromMainClassLoader(PluginRegistry.java:119) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginManager.collectPlugins(PluginManager.java:132) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:131) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:112) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createPatternParser(PatternLayout.java:209) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createSerializer(PatternLayout.java:123) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:111) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:58) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout$Builder.build(PatternLayout.java:494) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.setToDefault(AbstractConfiguration.java:567) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.DefaultConfiguration.<init>(DefaultConfiguration.java:47) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.LoggerContext.<init>(LoggerContext.java:81) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:171) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:145) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:74) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:227) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:174) ~[log4j-api-2.7.jar:2.7]
+	at org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration$Log4JCoreLoggerContextCondition.getMatchOutcome(Log4J2MetricsAutoConfiguration.java:59) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.core.config.arbiters.Arbiter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 51 common frames omitted
+
+2024-03-20T15:05:18.665-04:00  INFO 2935 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 2935 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:05:18.666-04:00  INFO 2935 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:05:18.875-04:00  WARN 2935 --- [UserService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+2024-03-20T15:05:18.879-04:00  INFO 2935 --- [UserService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-20T15:05:18.888-04:00 ERROR 2935 --- [UserService] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.manikanta.microservices.project.UserService.UserServiceApplication.main(UserServiceApplication.java:9) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.4.jar:6.1.4]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/logging/log4j/core/config/arbiters/Arbiter
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013) ~[na:na]
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.decodeCacheFiles(PluginRegistry.java:181) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.loadFromMainClassLoader(PluginRegistry.java:119) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginManager.collectPlugins(PluginManager.java:132) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:131) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:112) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createPatternParser(PatternLayout.java:209) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createSerializer(PatternLayout.java:123) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:111) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:58) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout$Builder.build(PatternLayout.java:494) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.setToDefault(AbstractConfiguration.java:567) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.DefaultConfiguration.<init>(DefaultConfiguration.java:47) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.LoggerContext.<init>(LoggerContext.java:81) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:171) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:145) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:74) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:227) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:174) ~[log4j-api-2.7.jar:2.7]
+	at org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration$Log4JCoreLoggerContextCondition.getMatchOutcome(Log4J2MetricsAutoConfiguration.java:59) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.core.config.arbiters.Arbiter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 51 common frames omitted
+
+2024-03-20T15:06:33.565-04:00  INFO 3022 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 3022 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:06:33.567-04:00  INFO 3022 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:06:33.955-04:00  INFO 3022 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T15:06:33.975-04:00  INFO 3022 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2024-03-20T15:06:34.237-04:00  INFO 3022 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T15:06:34.242-04:00  INFO 3022 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T15:06:34.242-04:00  INFO 3022 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T15:06:34.260-04:00  INFO 3022 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T15:06:34.260-04:00  INFO 3022 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 670 ms
+2024-03-20T15:06:34.373-04:00  INFO 3022 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T15:06:34.393-04:00  INFO 3022 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T15:06:34.405-04:00  INFO 3022 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T15:06:34.471-04:00  INFO 3022 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T15:06:34.479-04:00  INFO 3022 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T15:06:34.528-04:00  INFO 3022 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@571d0925
+2024-03-20T15:06:34.529-04:00  INFO 3022 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T15:06:34.543-04:00  WARN 3022 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T15:06:34.796-04:00  INFO 3022 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T15:06:34.819-04:00  INFO 3022 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:06:34.975-04:00  WARN 3022 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T15:06:35.231-04:00  INFO 3022 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-03-20T15:06:35.267-04:00  INFO 3022 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T15:06:35.276-04:00  INFO 3022 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.881 seconds (process running for 2.08)
+2024-03-20T15:06:57.425-04:00  INFO 3022 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:06:57.428-04:00  INFO 3022 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T15:06:57.431-04:00  INFO 3022 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T15:37:39.130-04:00  INFO 5712 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 5712 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:37:39.131-04:00  INFO 5712 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:37:39.373-04:00  WARN 5712 --- [UserService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+2024-03-20T15:37:39.378-04:00  INFO 5712 --- [UserService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-03-20T15:37:39.389-04:00 ERROR 5712 --- [UserService] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.manikanta.microservices.project.UserService.UserServiceApplication]: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:544) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:746) ~[spring-context-6.1.4.jar:6.1.4]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:743) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:714) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:183) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.3.jar:3.2.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.3.jar:3.2.3]
+	at com.manikanta.microservices.project.UserService.UserServiceApplication.main(UserServiceApplication.java:9) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration due to org/apache/logging/log4j/core/config/arbiters/Arbiter not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:220) ~[spring-context-6.1.4.jar:6.1.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:534) ~[spring-context-6.1.4.jar:6.1.4]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/apache/logging/log4j/core/config/arbiters/Arbiter
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1013) ~[na:na]
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.decodeCacheFiles(PluginRegistry.java:181) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginRegistry.loadFromMainClassLoader(PluginRegistry.java:119) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.plugins.util.PluginManager.collectPlugins(PluginManager.java:132) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:131) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:112) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createPatternParser(PatternLayout.java:209) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.createSerializer(PatternLayout.java:123) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:111) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:58) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.layout.PatternLayout$Builder.build(PatternLayout.java:494) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.setToDefault(AbstractConfiguration.java:567) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.config.DefaultConfiguration.<init>(DefaultConfiguration.java:47) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.LoggerContext.<init>(LoggerContext.java:81) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.createContext(ClassLoaderContextSelector.java:171) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.locateContext(ClassLoaderContextSelector.java:145) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.selector.ClassLoaderContextSelector.getContext(ClassLoaderContextSelector.java:74) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:227) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:45) ~[log4j-core-2.7.jar:2.7]
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:174) ~[log4j-api-2.7.jar:2.7]
+	at org.springframework.boot.actuate.autoconfigure.metrics.Log4J2MetricsAutoConfiguration$Log4JCoreLoggerContextCondition.getMatchOutcome(Log4J2MetricsAutoConfiguration.java:59) ~[spring-boot-actuator-autoconfigure-3.2.3.jar:3.2.3]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.2.3.jar:3.2.3]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.apache.logging.log4j.core.config.arbiters.Arbiter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 51 common frames omitted
+
+2024-03-20T15:38:31.257-04:00  INFO 5786 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 5786 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:38:31.258-04:00  INFO 5786 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:38:31.680-04:00  INFO 5786 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T15:38:31.701-04:00  INFO 5786 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2024-03-20T15:38:31.960-04:00  INFO 5786 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T15:38:31.965-04:00  INFO 5786 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T15:38:31.965-04:00  INFO 5786 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T15:38:31.985-04:00  INFO 5786 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T15:38:31.985-04:00  INFO 5786 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 706 ms
+2024-03-20T15:38:32.104-04:00  INFO 5786 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T15:38:32.124-04:00  INFO 5786 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T15:38:32.136-04:00  INFO 5786 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T15:38:32.205-04:00  INFO 5786 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T15:38:32.213-04:00  INFO 5786 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T15:38:32.265-04:00  INFO 5786 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c64339f
+2024-03-20T15:38:32.266-04:00  INFO 5786 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T15:38:32.280-04:00  WARN 5786 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T15:38:32.537-04:00  INFO 5786 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T15:38:32.562-04:00  INFO 5786 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:38:32.718-04:00  WARN 5786 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T15:38:33.006-04:00  INFO 5786 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-03-20T15:38:33.045-04:00  INFO 5786 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T15:38:33.054-04:00  INFO 5786 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.949 seconds (process running for 2.15)
+2024-03-20T15:39:06.931-04:00  INFO 5786 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:39:06.934-04:00  INFO 5786 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T15:39:06.936-04:00  INFO 5786 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T15:39:08.968-04:00  INFO 5839 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 5839 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:39:08.969-04:00  INFO 5839 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:39:09.323-04:00  INFO 5839 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T15:39:09.341-04:00  INFO 5839 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2024-03-20T15:39:09.580-04:00  INFO 5839 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T15:39:09.584-04:00  INFO 5839 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T15:39:09.585-04:00  INFO 5839 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T15:39:09.603-04:00  INFO 5839 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T15:39:09.603-04:00  INFO 5839 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 618 ms
+2024-03-20T15:39:09.721-04:00  INFO 5839 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T15:39:09.738-04:00  INFO 5839 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T15:39:09.750-04:00  INFO 5839 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T15:39:09.815-04:00  INFO 5839 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T15:39:09.822-04:00  INFO 5839 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T15:39:09.871-04:00  INFO 5839 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f3f57ff
+2024-03-20T15:39:09.872-04:00  INFO 5839 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T15:39:09.887-04:00  WARN 5839 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T15:39:10.123-04:00  INFO 5839 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T15:39:10.148-04:00  INFO 5839 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:39:10.300-04:00  WARN 5839 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T15:39:10.582-04:00  INFO 5839 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2024-03-20T15:39:10.622-04:00  INFO 5839 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T15:39:10.631-04:00  INFO 5839 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.803 seconds (process running for 1.997)
+2024-03-20T15:39:19.220-04:00  INFO 5839 --- [UserService] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T15:39:19.220-04:00  INFO 5839 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T15:39:19.221-04:00  INFO 5839 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T15:39:19.236-04:00  INFO 5839 --- [UserService] [http-nio-8080-exec-2] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get all user method
+2024-03-20T15:39:26.185-04:00  INFO 5839 --- [UserService] [http-nio-8080-exec-3] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get user by id method
+2024-03-20T15:55:33.550-04:00  INFO 5839 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:55:33.554-04:00  INFO 5839 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T15:55:33.560-04:00  INFO 5839 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T15:55:35.829-04:00  INFO 7088 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 7088 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T15:55:35.830-04:00  INFO 7088 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T15:55:36.180-04:00  INFO 7088 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T15:55:36.198-04:00  INFO 7088 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2024-03-20T15:55:36.432-04:00  INFO 7088 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T15:55:36.436-04:00  INFO 7088 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T15:55:36.436-04:00  INFO 7088 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T15:55:36.454-04:00  INFO 7088 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T15:55:36.454-04:00  INFO 7088 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 606 ms
+2024-03-20T15:55:36.571-04:00  INFO 7088 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T15:55:36.588-04:00  INFO 7088 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T15:55:36.598-04:00  INFO 7088 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T15:55:36.660-04:00  INFO 7088 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T15:55:36.668-04:00  INFO 7088 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T15:55:36.719-04:00  INFO 7088 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77856cc5
+2024-03-20T15:55:36.720-04:00  INFO 7088 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T15:55:36.733-04:00  WARN 7088 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T15:55:36.984-04:00  INFO 7088 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T15:55:37.013-04:00  INFO 7088 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:55:37.166-04:00  WARN 7088 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T15:55:37.456-04:00  INFO 7088 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T15:55:37.496-04:00  INFO 7088 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T15:55:37.505-04:00  INFO 7088 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.816 seconds (process running for 2.177)
+2024-03-20T15:55:43.595-04:00  INFO 7088 --- [UserService] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T15:55:43.595-04:00  INFO 7088 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T15:55:43.596-04:00  INFO 7088 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T15:55:43.613-04:00  WARN 7088 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : Request method 'GET' is not supported
+2024-03-20T15:56:56.602-04:00  INFO 7088 --- [UserService] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T15:56:56.606-04:00  INFO 7088 --- [UserService] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T15:56:56.610-04:00  INFO 7088 --- [UserService] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T16:01:16.582-04:00  INFO 7484 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 7484 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T16:01:16.583-04:00  INFO 7484 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T16:01:16.971-04:00  INFO 7484 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T16:01:16.991-04:00  INFO 7484 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2024-03-20T16:01:17.225-04:00  INFO 7484 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T16:01:17.229-04:00  INFO 7484 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T16:01:17.230-04:00  INFO 7484 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T16:01:17.248-04:00  INFO 7484 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T16:01:17.249-04:00  INFO 7484 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 648 ms
+2024-03-20T16:01:17.363-04:00  INFO 7484 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T16:01:17.382-04:00  INFO 7484 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T16:01:17.395-04:00  INFO 7484 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T16:01:17.462-04:00  INFO 7484 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T16:01:17.470-04:00  INFO 7484 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T16:01:17.521-04:00  INFO 7484 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@428eb3d5
+2024-03-20T16:01:17.522-04:00  INFO 7484 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T16:01:17.535-04:00  WARN 7484 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T16:01:17.776-04:00  INFO 7484 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T16:01:17.799-04:00  INFO 7484 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:01:17.958-04:00  WARN 7484 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T16:01:18.252-04:00  INFO 7484 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T16:01:18.291-04:00  INFO 7484 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T16:01:18.300-04:00  INFO 7484 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.863 seconds (process running for 2.806)
+2024-03-20T16:04:05.000-04:00  INFO 7484 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T16:04:05.001-04:00  INFO 7484 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T16:04:05.005-04:00  INFO 7484 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-03-20T16:05:15.626-04:00  INFO 7484 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:05:15.628-04:00  INFO 7484 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T16:05:15.632-04:00  INFO 7484 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T16:05:18.874-04:00  INFO 7811 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 7811 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T16:05:18.875-04:00  INFO 7811 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T16:05:19.315-04:00  INFO 7811 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T16:05:19.333-04:00  INFO 7811 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2024-03-20T16:05:19.581-04:00  INFO 7811 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T16:05:19.587-04:00  INFO 7811 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T16:05:19.587-04:00  INFO 7811 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T16:05:19.607-04:00  INFO 7811 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T16:05:19.607-04:00  INFO 7811 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 714 ms
+2024-03-20T16:05:19.722-04:00  INFO 7811 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T16:05:19.738-04:00  INFO 7811 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T16:05:19.748-04:00  INFO 7811 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T16:05:19.812-04:00  INFO 7811 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T16:05:19.819-04:00  INFO 7811 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T16:05:19.873-04:00  INFO 7811 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46994f26
+2024-03-20T16:05:19.874-04:00  INFO 7811 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T16:05:19.888-04:00  WARN 7811 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T16:05:20.124-04:00  INFO 7811 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T16:05:20.160-04:00  INFO 7811 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:05:20.363-04:00  WARN 7811 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T16:05:20.725-04:00  INFO 7811 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T16:05:20.766-04:00  INFO 7811 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T16:05:20.776-04:00  INFO 7811 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 2.047 seconds (process running for 2.404)
+2024-03-20T16:05:26.784-04:00  INFO 7811 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T16:05:26.784-04:00  INFO 7811 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T16:05:26.786-04:00  INFO 7811 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-20T16:05:27.127-04:00  INFO 7811 --- [UserService] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 84 ms
+2024-03-20T16:06:02.684-04:00  INFO 7811 --- [UserService] [http-nio-8080-exec-6] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get user by id method
+2024-03-20T16:06:05.099-04:00  INFO 7811 --- [UserService] [http-nio-8080-exec-8] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get user by id method
+2024-03-20T16:09:12.248-04:00  INFO 7811 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:09:12.254-04:00  INFO 7811 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T16:09:12.258-04:00  INFO 7811 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T16:09:14.388-04:00  INFO 8069 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 8069 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T16:09:14.389-04:00  INFO 8069 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T16:09:14.781-04:00  INFO 8069 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T16:09:14.798-04:00  INFO 8069 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2024-03-20T16:09:15.048-04:00  INFO 8069 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T16:09:15.053-04:00  INFO 8069 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T16:09:15.053-04:00  INFO 8069 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T16:09:15.075-04:00  INFO 8069 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T16:09:15.075-04:00  INFO 8069 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
+2024-03-20T16:09:15.186-04:00  INFO 8069 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T16:09:15.203-04:00  INFO 8069 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T16:09:15.213-04:00  INFO 8069 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T16:09:15.274-04:00  INFO 8069 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T16:09:15.282-04:00  INFO 8069 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T16:09:15.334-04:00  INFO 8069 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e6e5da4
+2024-03-20T16:09:15.335-04:00  INFO 8069 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T16:09:15.348-04:00  WARN 8069 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T16:09:15.590-04:00  INFO 8069 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T16:09:15.613-04:00  INFO 8069 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:09:15.807-04:00  WARN 8069 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T16:09:16.151-04:00  INFO 8069 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T16:09:16.192-04:00  INFO 8069 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T16:09:16.202-04:00  INFO 8069 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.946 seconds (process running for 2.356)
+2024-03-20T16:09:20.223-04:00  INFO 8069 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T16:09:20.224-04:00  INFO 8069 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T16:09:20.226-04:00  INFO 8069 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-20T16:09:20.589-04:00  INFO 8069 --- [UserService] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 86 ms
+2024-03-20T16:12:37.337-04:00  INFO 8069 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:12:37.348-04:00  INFO 8069 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T16:12:37.355-04:00  INFO 8069 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T16:12:39.599-04:00  INFO 8316 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 8316 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T16:12:39.600-04:00  INFO 8316 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T16:12:40.022-04:00  INFO 8316 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T16:12:40.051-04:00  INFO 8316 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interface.
+2024-03-20T16:12:40.343-04:00  INFO 8316 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T16:12:40.349-04:00  INFO 8316 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T16:12:40.349-04:00  INFO 8316 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T16:12:40.374-04:00  INFO 8316 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T16:12:40.375-04:00  INFO 8316 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 751 ms
+2024-03-20T16:12:40.520-04:00  INFO 8316 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T16:12:40.557-04:00  INFO 8316 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T16:12:40.571-04:00  INFO 8316 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T16:12:40.684-04:00  INFO 8316 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T16:12:40.692-04:00  INFO 8316 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T16:12:40.750-04:00  INFO 8316 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b4ba615
+2024-03-20T16:12:40.751-04:00  INFO 8316 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T16:12:40.766-04:00  WARN 8316 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T16:12:41.038-04:00  INFO 8316 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T16:12:41.075-04:00  INFO 8316 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:12:41.300-04:00  WARN 8316 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T16:12:41.654-04:00  INFO 8316 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T16:12:41.697-04:00  INFO 8316 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T16:12:41.708-04:00  INFO 8316 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 2.263 seconds (process running for 2.48)
+2024-03-20T16:12:42.614-04:00  INFO 8316 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T16:12:42.614-04:00  INFO 8316 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T16:12:42.615-04:00  INFO 8316 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T16:12:42.958-04:00  INFO 8316 --- [UserService] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 93 ms
+2024-03-20T16:17:49.370-04:00  INFO 8316 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:17:49.376-04:00  INFO 8316 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T16:17:49.385-04:00  INFO 8316 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T16:17:51.875-04:00  INFO 8661 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 8661 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T16:17:51.876-04:00  INFO 8661 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T16:17:52.343-04:00  INFO 8661 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T16:17:52.363-04:00  INFO 8661 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2024-03-20T16:17:52.713-04:00  INFO 8661 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T16:17:52.717-04:00  INFO 8661 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T16:17:52.717-04:00  INFO 8661 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T16:17:52.742-04:00  INFO 8661 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T16:17:52.743-04:00  INFO 8661 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 831 ms
+2024-03-20T16:17:52.865-04:00  INFO 8661 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T16:17:52.882-04:00  INFO 8661 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T16:17:52.893-04:00  INFO 8661 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T16:17:52.958-04:00  INFO 8661 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T16:17:52.965-04:00  INFO 8661 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T16:17:53.010-04:00  INFO 8661 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@aa8dce8
+2024-03-20T16:17:53.011-04:00  INFO 8661 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T16:17:53.024-04:00  WARN 8661 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T16:17:53.290-04:00  INFO 8661 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T16:17:53.315-04:00  INFO 8661 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:17:53.518-04:00  WARN 8661 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T16:17:53.863-04:00  INFO 8661 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T16:17:53.904-04:00  INFO 8661 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T16:17:53.914-04:00  INFO 8661 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 2.215 seconds (process running for 2.629)
+2024-03-20T16:17:59.889-04:00  INFO 8661 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T16:17:59.889-04:00  INFO 8661 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T16:17:59.892-04:00  INFO 8661 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-20T16:18:00.261-04:00  INFO 8661 --- [UserService] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 86 ms
+2024-03-20T16:23:02.812-04:00  INFO 8661 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:23:02.826-04:00  INFO 8661 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T16:23:02.834-04:00  INFO 8661 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T16:23:05.081-04:00  INFO 9005 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 9005 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T16:23:05.082-04:00  INFO 9005 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T16:23:05.480-04:00  INFO 9005 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T16:23:05.497-04:00  INFO 9005 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2024-03-20T16:23:05.736-04:00  INFO 9005 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T16:23:05.741-04:00  INFO 9005 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T16:23:05.741-04:00  INFO 9005 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T16:23:05.763-04:00  INFO 9005 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T16:23:05.763-04:00  INFO 9005 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 657 ms
+2024-03-20T16:23:05.879-04:00  INFO 9005 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T16:23:05.895-04:00  INFO 9005 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T16:23:05.905-04:00  INFO 9005 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T16:23:05.969-04:00  INFO 9005 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T16:23:05.977-04:00  INFO 9005 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T16:23:06.027-04:00  INFO 9005 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13404f75
+2024-03-20T16:23:06.028-04:00  INFO 9005 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T16:23:06.042-04:00  WARN 9005 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T16:23:06.270-04:00  INFO 9005 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T16:23:06.294-04:00  INFO 9005 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T16:23:06.479-04:00  WARN 9005 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T16:23:06.810-04:00  INFO 9005 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T16:23:06.850-04:00  INFO 9005 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T16:23:06.860-04:00  INFO 9005 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.912 seconds (process running for 2.276)
+2024-03-20T16:23:13.991-04:00  INFO 9005 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T16:23:13.991-04:00  INFO 9005 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T16:23:13.994-04:00  INFO 9005 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-20T16:23:14.331-04:00  INFO 9005 --- [UserService] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 95 ms
+2024-03-20T17:06:05.895-04:00  INFO 9005 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:06:05.901-04:00  INFO 9005 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T17:06:05.905-04:00  INFO 9005 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T17:06:08.620-04:00  INFO 12078 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 12078 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T17:06:08.621-04:00  INFO 12078 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T17:06:09.066-04:00  INFO 12078 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T17:06:09.084-04:00  INFO 12078 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2024-03-20T17:06:09.332-04:00  INFO 12078 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T17:06:09.337-04:00  INFO 12078 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T17:06:09.337-04:00  INFO 12078 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T17:06:09.356-04:00  INFO 12078 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T17:06:09.357-04:00  INFO 12078 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 712 ms
+2024-03-20T17:06:09.484-04:00  INFO 12078 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T17:06:09.506-04:00  INFO 12078 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T17:06:09.521-04:00  INFO 12078 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T17:06:09.589-04:00  INFO 12078 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T17:06:09.597-04:00  INFO 12078 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T17:06:09.652-04:00  INFO 12078 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22604c7e
+2024-03-20T17:06:09.653-04:00  INFO 12078 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T17:06:09.668-04:00  WARN 12078 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T17:06:09.917-04:00  INFO 12078 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T17:06:09.953-04:00  INFO 12078 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:06:10.148-04:00  WARN 12078 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T17:06:10.487-04:00  INFO 12078 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T17:06:10.528-04:00  INFO 12078 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T17:06:10.538-04:00  INFO 12078 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 2.077 seconds (process running for 2.314)
+2024-03-20T17:06:35.713-04:00  INFO 12078 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T17:06:35.714-04:00  INFO 12078 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T17:06:35.715-04:00  INFO 12078 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T17:06:35.740-04:00  INFO 12078 --- [UserService] [http-nio-8080-exec-1] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get all user method
+2024-03-20T17:06:45.420-04:00  INFO 12078 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:06:45.422-04:00  INFO 12078 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T17:06:45.425-04:00  INFO 12078 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T17:06:47.510-04:00  INFO 12128 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 12128 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T17:06:47.511-04:00  INFO 12128 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T17:06:47.959-04:00  INFO 12128 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T17:06:47.980-04:00  INFO 12128 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2024-03-20T17:06:48.227-04:00  INFO 12128 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T17:06:48.232-04:00  INFO 12128 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T17:06:48.232-04:00  INFO 12128 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T17:06:48.254-04:00  INFO 12128 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T17:06:48.254-04:00  INFO 12128 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 720 ms
+2024-03-20T17:06:48.372-04:00  INFO 12128 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T17:06:48.388-04:00  INFO 12128 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T17:06:48.398-04:00  INFO 12128 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T17:06:48.462-04:00  INFO 12128 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T17:06:48.470-04:00  INFO 12128 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T17:06:48.520-04:00  INFO 12128 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@445b85d7
+2024-03-20T17:06:48.521-04:00  INFO 12128 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T17:06:48.536-04:00  WARN 12128 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T17:06:48.780-04:00  INFO 12128 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T17:06:48.806-04:00  INFO 12128 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:06:49.001-04:00  WARN 12128 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T17:06:49.350-04:00  INFO 12128 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T17:06:49.393-04:00  INFO 12128 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T17:06:49.405-04:00  INFO 12128 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 2.041 seconds (process running for 2.247)
+2024-03-20T17:06:50.941-04:00  INFO 12128 --- [UserService] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T17:06:50.942-04:00  INFO 12128 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T17:06:50.943-04:00  INFO 12128 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T17:06:50.962-04:00  INFO 12128 --- [UserService] [http-nio-8080-exec-2] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get all user method
+2024-03-20T17:09:21.142-04:00  INFO 12128 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:09:21.144-04:00  INFO 12128 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T17:09:21.147-04:00  INFO 12128 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T17:09:23.585-04:00  INFO 12291 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 12291 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T17:09:23.586-04:00  INFO 12291 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T17:09:24.010-04:00  INFO 12291 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T17:09:24.027-04:00  INFO 12291 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2024-03-20T17:09:24.273-04:00  INFO 12291 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T17:09:24.277-04:00  INFO 12291 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T17:09:24.277-04:00  INFO 12291 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T17:09:24.297-04:00  INFO 12291 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T17:09:24.297-04:00  INFO 12291 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 688 ms
+2024-03-20T17:09:24.416-04:00  INFO 12291 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T17:09:24.440-04:00  INFO 12291 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T17:09:24.452-04:00  INFO 12291 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T17:09:24.517-04:00  INFO 12291 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T17:09:24.525-04:00  INFO 12291 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T17:09:24.574-04:00  INFO 12291 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d8f2cfd
+2024-03-20T17:09:24.575-04:00  INFO 12291 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T17:09:24.591-04:00  WARN 12291 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T17:09:24.832-04:00  INFO 12291 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T17:09:24.854-04:00  INFO 12291 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:09:25.047-04:00  WARN 12291 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T17:09:25.389-04:00  INFO 12291 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T17:09:25.431-04:00  INFO 12291 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T17:09:25.441-04:00  INFO 12291 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 1.993 seconds (process running for 2.335)
+2024-03-20T17:09:32.463-04:00  INFO 12291 --- [UserService] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T17:09:32.463-04:00  INFO 12291 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T17:09:32.464-04:00  INFO 12291 --- [UserService] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T17:09:32.484-04:00  INFO 12291 --- [UserService] [http-nio-8080-exec-2] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get all user method
+2024-03-20T17:09:51.139-04:00  INFO 12291 --- [UserService] [http-nio-8080-exec-3] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get all user method
+2024-03-20T17:10:33.981-04:00  INFO 12291 --- [UserService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:10:33.983-04:00  INFO 12291 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-20T17:10:33.986-04:00  INFO 12291 --- [UserService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-20T17:10:35.297-04:00  INFO 12369 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Starting UserServiceApplication using Java 18 with PID 12369 (/Users/saimanikantatelagamsetty/gitCourse/UserService/target/classes started by saimanikantatelagamsetty in /Users/saimanikantatelagamsetty/gitCourse)
+2024-03-20T17:10:35.298-04:00  INFO 12369 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-03-20T17:10:35.734-04:00  INFO 12369 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-20T17:10:35.753-04:00  INFO 12369 --- [UserService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2024-03-20T17:10:36.015-04:00  INFO 12369 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-20T17:10:36.020-04:00  INFO 12369 --- [UserService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-20T17:10:36.020-04:00  INFO 12369 --- [UserService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-20T17:10:36.040-04:00  INFO 12369 --- [UserService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-20T17:10:36.041-04:00  INFO 12369 --- [UserService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 717 ms
+2024-03-20T17:10:36.167-04:00  INFO 12369 --- [UserService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-20T17:10:36.185-04:00  INFO 12369 --- [UserService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-20T17:10:36.198-04:00  INFO 12369 --- [UserService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-20T17:10:36.264-04:00  INFO 12369 --- [UserService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-20T17:10:36.271-04:00  INFO 12369 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-20T17:10:36.318-04:00  INFO 12369 --- [UserService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62360a68
+2024-03-20T17:10:36.319-04:00  INFO 12369 --- [UserService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-20T17:10:36.332-04:00  WARN 12369 --- [UserService] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-03-20T17:10:36.597-04:00  INFO 12369 --- [UserService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-20T17:10:36.618-04:00  INFO 12369 --- [UserService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-20T17:10:36.821-04:00  WARN 12369 --- [UserService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-20T17:10:37.215-04:00  INFO 12369 --- [UserService] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-03-20T17:10:37.261-04:00  INFO 12369 --- [UserService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-20T17:10:37.272-04:00  INFO 12369 --- [UserService] [main] c.m.m.p.U.UserServiceApplication         : Started UserServiceApplication in 2.126 seconds (process running for 2.333)
+2024-03-20T17:10:41.167-04:00  INFO 12369 --- [UserService] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-20T17:10:41.167-04:00  INFO 12369 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-20T17:10:41.168-04:00  INFO 12369 --- [UserService] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-20T17:10:41.562-04:00  INFO 12369 --- [UserService] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 113 ms
+2024-03-20T17:11:31.014-04:00  INFO 12369 --- [UserService] [http-nio-8080-exec-10] c.m.m.p.U.S.I.UserServiceImplementation  : entered into get all user method

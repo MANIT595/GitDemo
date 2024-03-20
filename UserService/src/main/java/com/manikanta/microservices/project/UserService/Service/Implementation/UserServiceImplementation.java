@@ -1,5 +1,6 @@
 package com.manikanta.microservices.project.UserService.Service.Implementation;
 
+import com.manikanta.microservices.project.UserService.DTO.UserResponse;
 import com.manikanta.microservices.project.UserService.DTO.UserDTO;
 import com.manikanta.microservices.project.UserService.Entity.User;
 import com.manikanta.microservices.project.UserService.Exception.EmailAlreadyFoundException;
@@ -12,6 +13,10 @@ import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -30,16 +35,8 @@ public class UserServiceImplementation implements UserService {
 //    private ModelMapper mapper;
 
     @Override
-    public List<UserDTO> getUsers() {
-        logger.debug("entered into get all user method");
-        List<User> users = userRepository.findAll();
-        return users.stream()
-                .map(AutoUserMapper.MAPPER::mapToDTO)
-                .collect(Collectors.toList());
-    }
-
-    @Override
     public UserDTO getUser(Long userId){
+        logger.info("entered into get user by id method");
         User user = userRepository.findById(userId).orElseThrow(()->new UserNotFoundException("No User Found with this userId: "+userId));
         return AutoUserMapper.MAPPER.mapToDTO(user);
     }
@@ -58,6 +55,30 @@ public class UserServiceImplementation implements UserService {
         }
         userRepository.save(user);
         System.out.println("saved to db");
+    }
+
+    @Override
+    public UserResponse getUsers(int pageNo, int pageSize, String pageSortBy, String sortDir) {
+
+        Sort sort = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(pageSortBy).ascending():
+                Sort.by(pageSortBy).descending();
+
+        Pageable pageable = PageRequest.of(pageNo,pageSize,sort);
+        logger.info("entered into get all user method");
+
+        Page<User> users = userRepository.findAll(pageable);
+
+        List<UserDTO> userDTOS = users.stream()
+                .map(AutoUserMapper.MAPPER::mapToDTO)
+                .collect(Collectors.toList());
+        UserResponse userResponse = new UserResponse();
+        userResponse.setUsers(userDTOS);
+        userResponse.setPageNo(users.getNumber());
+        userResponse.setPageSize(users.getSize());
+        userResponse.setTotalElements(users.getTotalElements());
+        userResponse.setTotalPages(users.getTotalPages());
+        userResponse.setLast(users.isLast());
+        return userResponse;
     }
 
 }
