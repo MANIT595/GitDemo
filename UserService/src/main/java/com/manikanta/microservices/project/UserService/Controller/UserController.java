@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -18,7 +19,6 @@ import org.springframework.web.bind.annotation.*;
         description = "User REST API to implement the CRUD operations"
 )
 @RestController
-@RequestMapping("api/users")
 @AllArgsConstructor
 public class UserController {
 
@@ -33,7 +33,13 @@ public class UserController {
             responseCode = "200",
             description = "Got All Users 200"
     )
-    @GetMapping()
+
+    @GetMapping
+    public String welcomeAPI(){
+        return "Hello World Welcome to the API";
+    }
+
+    @GetMapping("/api/users")
     public UserResponse getUsers(
             @RequestParam(value = "pageNo", defaultValue = "0", required = false) int pageNo,
             @RequestParam(value = "pageSize", defaultValue = "10", required = false) int pageSize,
@@ -52,7 +58,8 @@ public class UserController {
             responseCode = "200",
             description = "Got User with id 200"
     )
-    @GetMapping("{user-id}")
+    @GetMapping("/api/users/{user-id}")
+    @PreAuthorize("hasAuthority('ADMINONE')")
     public UserDTO getUserById(@PathVariable("user-id") Long id) throws Exception {
         return userService.getUser(id);
     }
@@ -65,7 +72,7 @@ public class UserController {
             responseCode = "200",
             description = "Deleted the User 200"
     )
-    @DeleteMapping("{user-id}")
+    @DeleteMapping("/api/users/{user-id}")
     public void deleteUserById(@PathVariable("user-id") Long id) {
         userService.deleteUser(id);
     }
@@ -78,7 +85,8 @@ public class UserController {
             responseCode = "200",
             description = "Added the User 200"
     )
-    @PostMapping
+    @PostMapping("/api/users")
+    @PreAuthorize("hasRole('ADMIN')")
     public void addUser(@RequestBody @Valid User user){
         userService.addUser(user);
     }
