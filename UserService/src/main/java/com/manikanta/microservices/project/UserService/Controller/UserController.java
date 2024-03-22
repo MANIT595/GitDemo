@@ -59,7 +59,7 @@ public class UserController {
             description = "Got User with id 200"
     )
     @GetMapping("/api/users/{user-id}")
-    @PreAuthorize("hasAuthority('ADMINONE')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public UserDTO getUserById(@PathVariable("user-id") Long id) throws Exception {
         return userService.getUser(id);
     }
