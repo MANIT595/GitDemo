@@ -1,5 +1,7 @@
 package com.manikanta.microservices.project.UserService.Service.Implementation;
 
+import com.manikanta.microservices.project.UserService.DTO.OrderDTO;
+import com.manikanta.microservices.project.UserService.DTO.UserDtoOrders;
 import com.manikanta.microservices.project.UserService.DTO.UserResponse;
 import com.manikanta.microservices.project.UserService.DTO.UserDTO;
 import com.manikanta.microservices.project.UserService.Entity.User;
@@ -7,7 +9,10 @@ import com.manikanta.microservices.project.UserService.Exception.EmailAlreadyFou
 import com.manikanta.microservices.project.UserService.Exception.UserNotFoundException;
 import com.manikanta.microservices.project.UserService.Mapper.AutoUserMapper;
 import com.manikanta.microservices.project.UserService.Repository.UserRepository;
+import com.manikanta.microservices.project.UserService.Service.FeignAPIClient;
 import com.manikanta.microservices.project.UserService.Service.UserService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
@@ -18,6 +23,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,7 +38,16 @@ public class UserServiceImplementation implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    Logger logger = LoggerFactory.getLogger(UserServiceImplementation.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImplementation.class);
+
+//    @Autowired
+//    private RestTemplate  restTemplate;
+
+//    @Autowired
+//            private WebClient webClient;
+
+    @Autowired
+            private FeignAPIClient feignAPIClient;
 
 //    @Autowired
 //    private ModelMapper mapper;
@@ -79,6 +97,75 @@ public class UserServiceImplementation implements UserService {
         userResponse.setTotalPages(users.getTotalPages());
         userResponse.setLast(users.isLast());
         return userResponse;
+    }
+
+    // Using WebClient and RestTemplate are similar we need to add the dependencies and create a Bean and implement in the
+    // service Implementation class
+
+    //Using feign client
+    // add feign client dependency to class
+    // enable feign client with annotation @EnableFeignClients
+    // create Feign client and implement
+
+//    @CircuitBreaker(name= "${spring.application.name}" , fallbackMethod = "getDefaultOrders")
+    @Retry(name= "${spring.application.name}" , fallbackMethod = "getDefaultOrders")
+    @Override
+    public UserDtoOrders getUsersOrders(String userId) {
+        logger.info("In the GetUsersOrders");
+        User user = userRepository.findById(Long.parseLong(userId)).orElseThrow(()->new UserNotFoundException("No User Found with this userId: "+userId));
+
+//        ResponseEntity<List<OrderDTO>> responseEntity = restTemplate.exchange(
+//                "http://localhost:8082/api/orders/user/" + userId,
+//                HttpMethod.GET,
+//                null,
+//                new ParameterizedTypeReference<>() {
+//                }
+//        );
+//        List<OrderDTO> orderDTOS = webClient.get()
+//                .uri("http://localhost:8082/api/orders/user/" + userId)
+//                .retrieve()
+//                .bodyToFlux(OrderDTO.class)
+//                .collectList()
+//                .block();
+
+        List<OrderDTO> orderDTOS = feignAPIClient.getOrdersByUserId(userId);
+
+        UserDtoOrders userDtoOrders = new UserDtoOrders();
+            userDtoOrders.setUserDTO(AutoUserMapper.MAPPER.mapToDTO(user));
+            userDtoOrders.setOrderDTOS(orderDTOS);
+          return userDtoOrders;
+
+//        if (responseEntity.getStatusCode().is2xxSuccessful()) {
+//            UserDtoOrders userDtoOrders = new UserDtoOrders();
+//            userDtoOrders.setUserDTO(AutoUserMapper.MAPPER.mapToDTO(user));
+//            userDtoOrders.setOrderDTOS(responseEntity.getBody());
+//            return userDtoOrders;
+//        } else {
+//            // Handle error response
+//            throw new RuntimeException("Failed to fetch orders for user: " + userId);
+//        }
+    }
+
+    public UserDtoOrders getDefaultOrders(String userId, Exception e) {
+
+        logger.info("In the GetDefaultOrders");
+        User user = userRepository.findById(Long.parseLong(userId)).orElseThrow(()->new UserNotFoundException("No User Found with this userId: "+userId));
+
+
+        OrderDTO orderDTO = new OrderDTO();
+        orderDTO.setOrderID(0);
+        orderDTO.setUserId(0);
+        orderDTO.setOrderStatus("Nothing");
+
+        List<OrderDTO> orderDTOS = new ArrayList<>();
+
+        orderDTOS.add(orderDTO);
+
+        UserDtoOrders userDtoOrders = new UserDtoOrders();
+        userDtoOrders.setUserDTO(AutoUserMapper.MAPPER.mapToDTO(user));
+        userDtoOrders.setOrderDTOS(orderDTOS);
+        return userDtoOrders;
+
     }
 
 }

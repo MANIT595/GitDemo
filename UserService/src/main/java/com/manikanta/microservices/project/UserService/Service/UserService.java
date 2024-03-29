@@ -1,5 +1,6 @@
 package com.manikanta.microservices.project.UserService.Service;
 
+import com.manikanta.microservices.project.UserService.DTO.UserDtoOrders;
 import com.manikanta.microservices.project.UserService.DTO.UserResponse;
 import com.manikanta.microservices.project.UserService.DTO.UserDTO;
 import com.manikanta.microservices.project.UserService.Entity.User;
@@ -16,4 +17,6 @@ public interface UserService {
     void addUser(User user);
 
     UserResponse getUsers(int pageNo, int pageSize, String pageSortBy, String sortDir);
+
+    UserDtoOrders getUsersOrders(String userId);
 }

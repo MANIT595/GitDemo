@@ -1,5 +1,6 @@
 package com.manikanta.microservices.project.UserService.Controller;
 
+import com.manikanta.microservices.project.UserService.DTO.UserDtoOrders;
 import com.manikanta.microservices.project.UserService.DTO.UserResponse;
 import com.manikanta.microservices.project.UserService.DTO.UserDTO;
 import com.manikanta.microservices.project.UserService.Entity.User;
@@ -57,6 +58,8 @@ public class UserController {
         return userService.getUser(id);
     }
 
+
+
     @Operation(
             summary = "Delete User",
             description = "Delete the User From the Database"
@@ -83,5 +86,10 @@ public class UserController {
         userService.addUser(user);
     }
 
+
+    @GetMapping("orders/{user-id}")
+    public UserDtoOrders getUserAndOrderByUserId(@PathVariable("user-id") String id){
+        return userService.getUsersOrders(id);
+    }
 
 }

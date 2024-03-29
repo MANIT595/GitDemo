@@ -27,6 +27,12 @@ public class OrderController {
         return orderService.getOrder(id);
     }
 
+    @GetMapping("/user/{user-id}")
+    public List<OrderDTO> getOrdersByUserId( @PathVariable("user-id") String userId) {
+        Long id = Long.parseLong(userId);
+        return orderService.getOrderByUserId(id);
+    }
+
     @DeleteMapping("{order-id}")
     public void deleteUserById(@PathVariable("order-id") Long id) {
         orderService.deleteOrder(id);

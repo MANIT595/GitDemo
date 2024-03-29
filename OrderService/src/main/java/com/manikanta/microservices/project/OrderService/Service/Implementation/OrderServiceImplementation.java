@@ -44,6 +44,14 @@ public class OrderServiceImplementation implements OrderService {
         System.out.println("Order Added");
     }
 
+    @Override
+    public List<OrderDTO> getOrderByUserId(Long userId) {
+        List<Order> orders = orderRepository.findByUserId(userId);
+        return orders.stream()
+                .map((order -> mapToDTO(order)))
+                .collect(Collectors.toList());
+    }
+
     public OrderDTO mapToDTO(Order order){
         return modelMapper.map(order,OrderDTO.class);
     }

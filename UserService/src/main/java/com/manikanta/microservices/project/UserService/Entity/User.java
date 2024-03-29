@@ -13,6 +13,7 @@ import lombok.*;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "user")
 public class User {
@@ -51,4 +52,6 @@ public class User {
     @NotEmpty(message = "password should not be null or empty")
     private String password;
 
+    public User(String manikanta, String s, String s1, String mani) {
+    }
 }
